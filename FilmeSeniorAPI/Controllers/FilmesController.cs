@@ -9,7 +9,6 @@ namespace FilmeSeniorAPI.Controllers
     [Route("[controller]")]
     public class FilmesController : ControllerBase
     {
-        public static List<Filme> filmes = new List<Filme>();
 
         [HttpGet]
         public async void getFilmes()
@@ -18,7 +17,8 @@ namespace FilmeSeniorAPI.Controllers
             var response = await httpClient.GetAsync(requestUri: "https://jsonmock.hackerrank.com/api/movies/search/?Title=Waterworld");
             var data = await response.Content.ReadAsStringAsync();
             var apiResponse = JsonConvert.DeserializeObject<JsonResponseAPI>(data);
-            Console.WriteLine(apiResponse.Filmes[0].ImdbID);
+            List<Movie> movies = apiResponse.getMovies();
+            Console.WriteLine(movies[0].getImdbID());
         }
     }
 }
