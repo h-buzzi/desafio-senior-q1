@@ -10,11 +10,11 @@ namespace FilmeSeniorAPI.Controllers
     public class FilmesController : ControllerBase
     {
 
-        [HttpGet]
-        public async void getFilmes()
+        [HttpGet("{movieName}")]
+        public async void getMovieByName(string movieName)
         {
             var httpClient = new HttpClient();
-            var response = await httpClient.GetAsync(requestUri: "https://jsonmock.hackerrank.com/api/movies/search/?Title=Waterworld");
+            var response = await httpClient.GetAsync(requestUri: $"https://jsonmock.hackerrank.com/api/movies/search/?Title={movieName}");
             var data = await response.Content.ReadAsStringAsync();
             var apiResponse = JsonConvert.DeserializeObject<JsonResponseAPI>(data);
             List<Movie> movies = apiResponse.getMovies();
