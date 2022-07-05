@@ -15,6 +15,12 @@ namespace FilmeSeniorAPI.Models
             this.moviesCount = 1;
         }
 
+        public MovieYearCount(int year, int moviesCount)
+        {
+            this.year = year;
+            this.moviesCount = moviesCount;
+        }
+
         public void incrementCount()
         {
             this.moviesCount++;

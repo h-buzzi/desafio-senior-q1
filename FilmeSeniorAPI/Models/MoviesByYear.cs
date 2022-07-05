@@ -18,17 +18,17 @@ namespace FilmeSeniorAPI.Models
         public void addMoviesToYearsList(List<Movie> movies)
         {
             foreach (Movie movie in movies)
-            {
-                int yearIndex = allYearsCount.FindIndex(previousFoundMovies => previousFoundMovies.getYear().Equals(movie.getYear()));
-                if (yearIndex != -1)
                 {
-                    allYearsCount[yearIndex].incrementCount();
+                 int yearIndex = allYearsCount.FindIndex(previousFoundMovies => previousFoundMovies.getYear().Equals(movie.getYear()));
+                    if (yearIndex != -1)
+                    {
+                        allYearsCount[yearIndex].incrementCount();
+                    }
+                    else
+                    {
+                        allYearsCount.Add(new MovieYearCount(movie.getYear()));
+                    }
                 }
-                else
-                {
-                    allYearsCount.Add(new MovieYearCount(movie.getYear()));
-                }
-            }
         }
 
         //Setters and Getters below

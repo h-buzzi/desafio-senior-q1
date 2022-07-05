@@ -12,6 +12,15 @@ namespace FilmeSeniorAPI.Models
         [JsonProperty("imdbID")]
         private string imdbID;
 
+        public Movie(string title, int year, string imdbID)
+        {
+            this.title = title;
+            this.year = year;
+            this.imdbID = imdbID;
+        }
+
+
+
         //Setter and Getters below
         public string getTitle() { return title; }
         public void setTitle(string title) { this.title = title; }
