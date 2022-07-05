@@ -15,7 +15,6 @@ namespace FilmeSeniorAPI.Models
             this.allYearsCount = new List<MovieYearCount>();
         }
 
-        //apiResponse.getMovies()
         public void addMoviesToYearsList(List<Movie> movies)
         {
             foreach (Movie movie in movies)
