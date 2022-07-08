@@ -4,11 +4,18 @@ namespace FilmeSeniorAPI.Models
 {
     public class HttpDatabaseResponse
     {
-        HttpClient httpClient = new HttpClient();
+        private HttpClient httpClient;
+        private bool failure;
+
+        public HttpDatabaseResponse()
+        {
+            httpClient = new HttpClient();
+            this.failure = false;
+        }
         public async Task<JsonResponseAPI> getJsonFromDatabaseResponse(string movieName, int page)
         {
             var response = await httpClient.GetAsync(requestUri: $"https://jsonmock.hackerrank.com/api/movies/search/?Title={movieName}&page={page}");
-            if (response.IsSuccessStatusCode) {
+            if (response.IsSuccessStatusCode & response != null) {
                 var data = await response.Content.ReadAsStringAsync();
                 if (data != null)
                 {
@@ -16,10 +23,15 @@ namespace FilmeSeniorAPI.Models
                         JsonResponseAPI apiResponse = JsonConvert.DeserializeObject<JsonResponseAPI>(data);
                         return apiResponse;
                             }
-                    catch { }
+                    catch (JsonException jsonExcept){
+                        failure = true;
+                        return new JsonResponseAPI();
+                    }
                 }
             }
+            failure = true;
             return new JsonResponseAPI();
         }
+        public bool getFailureStatus() { return failure; }
     }
 }

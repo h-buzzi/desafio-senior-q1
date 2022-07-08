@@ -15,6 +15,10 @@ namespace FilmeSeniorAPI.Controllers
         {
             HttpDatabaseResponse httpDatabaseResponse = new HttpDatabaseResponse();
             JsonResponseAPI apiResponse = await httpDatabaseResponse.getJsonFromDatabaseResponse(movieName, 1);
+            if (httpDatabaseResponse.getFailureStatus().Equals(true)) 
+            {
+                return NotFound();
+            }
             MoviesByYear moviesByYear = new MoviesByYear(apiResponse.getTotal());
             moviesByYear.addMoviesToYearsList(apiResponse.getMovies());
             if (apiResponse.getTotalPages() > 1)
