@@ -2,6 +2,7 @@
 
 namespace FilmeSeniorAPI.Models
 {
+    //Output object from this API
     public class MoviesByYear
     {
         [JsonProperty(PropertyName = "total")]
@@ -15,6 +16,7 @@ namespace FilmeSeniorAPI.Models
             this.allYearsCount = new List<MovieYearCount>();
         }
 
+        // Function responsible for adding new years or incrementing the count of an existing year from an list of movies.
         public void addMoviesToYearsList(List<Movie> movies)
         {
             foreach (Movie movie in movies)

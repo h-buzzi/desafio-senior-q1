@@ -9,7 +9,9 @@ namespace FilmeSeniorAPI.Controllers
     [Route("[controller]")]
     public class FilmesController : ControllerBase
     {
-
+        // This function is responsible of collecting a JSON from a WebAPI about movies through the usage of an input string.
+        // The function returns an object that contain the total entries found,
+        // as well as a list containing the years found and the respective movies found in it.
         [HttpGet("{movieName}")]
         public async Task<IActionResult> getMovieByName(string movieName)
         {

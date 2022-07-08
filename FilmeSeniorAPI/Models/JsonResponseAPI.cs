@@ -2,6 +2,7 @@
 
 namespace FilmeSeniorAPI.Models
 {
+    //Data Transfer Object from the expected JSON.
     public class JsonResponseAPI
     {
         [JsonProperty("page")]
