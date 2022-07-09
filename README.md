@@ -1,5 +1,5 @@
-## WebAPI em .NET para Desafio de Programação Senior Mega
-Esta aplicação é uma API que faz chamada para uma API de filmes, onde esta API desenvolvida irá retornar uma json com a total de entradas e uma lista de anos, em ordem crescente, com a respectiva quantidade de filmes encontrados naquele ano.
+## WebAPI em .NET 6 para Desafio de Programação Senior Mega
+Esta aplicação, desenvolvida em .NET 6, é uma API que faz chamada para uma API de filmes, onde esta API desenvolvida irá retornar uma json com a total de entradas e uma lista de anos, em ordem crescente, com a respectiva quantidade de filmes encontrados naquele ano.
 
 # Importante
 
