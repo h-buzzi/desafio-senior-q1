@@ -16,7 +16,7 @@ Uma vez com ele instalado, abra este repositório no VSCommunity, e selecione no
 ## Executando
 Após instalar o VSCommunity 2022, execute o mesmo e abra este repositório aqui. Uma vez com este repositório aberto, selecione no topo, perto da aba janela, sobre o botão de 'play' verde com o nome FilmesSeniorAPI para executar em modo debug, ou, o botão de 'play' verde não-preenchido para rodar FilmesSeniorApi mas sem estar em modo debug (sem depuração). Com isto, espera-se que abra um prompt de comando informando o endereço que API está rodando localmente.
 
-Para utilizar a API, utilize o endereço provido no cmd em seu navegador, e após a porta, coloque /filmes/$Nome que você deseja pesquisar.
+Para utilizar a API, utilize o endereço provido no cmd em seu navegador de escolha, e após a porta, coloque /filmes/$Nome que você deseja pesquisar. No fim, é esperado que tenha um endereço no mesmo formato que 'http//localhost:7131/filmes/Waterworld', onde obviamente, 'Waterworld' seria substituido pela sua string de busca.
 
 ## Aviso
 Caso esteja tendo algum problema com o fato de você já estar usando o endereço 'localhost:7131' ou 'localhost:5131', é possível alterar o endreço em launchSettings.json dentro de properties. Ali terá os campos 'applicationUrl', onde você poderá prover um novo endereço.
