@@ -31,6 +31,7 @@ namespace FilmeSeniorAPI.Controllers
                     moviesByYear.addMoviesToYearsList(apiResponse.getMovies());
                 }
             }
+            moviesByYear.sortListByYear();
             return Ok(JsonConvert.SerializeObject(moviesByYear));
         }
     }

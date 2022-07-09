@@ -33,6 +33,12 @@ namespace FilmeSeniorAPI.Models
                 }
         }
 
+        // Function responsible for making the list of year in crescent order
+        public void sortListByYear()
+        {
+            allYearsCount.Sort((x,y) =>x.getYear().CompareTo(y.getYear()));
+        }
+
         //Setters and Getters below
         public int getTotalEntriesFound() { return totalEntriesFound; }
         public void setTotalEntriesFound(int totalEntriesFound) { this.totalEntriesFound = totalEntriesFound; }
