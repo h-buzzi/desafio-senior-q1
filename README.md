@@ -4,7 +4,7 @@ Abaixo você encontra algumas intruções de como estar com sua máquina do mesm
 
 ## Instalação
 
-A primeira etapa é baixar o Visual Studio Community 2022, disponível em [a https://visualstudio.microsoft.com/pt-br/vs/community/](https://visualstudio.microsoft.com/pt-br/vs/community/), e instalá-lo.
+A primeira etapa é baixar o Visual Studio Community 2022, disponível em [https://visualstudio.microsoft.com/pt-br/vs/community/](https://visualstudio.microsoft.com/pt-br/vs/community/), e instalá-lo.
 
 Durante a instalação, marque a opção 'ASP.NET e Desenvolvimento Web', e mantenha as caixas que já vieram marcadas no opcional. De resto, podes seguir com a instalação padrão do Visual Studio Community 2022.
 
